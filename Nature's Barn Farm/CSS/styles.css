@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f1e8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #244d32;
+    color: white;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d8b365;
+}
+
+.hero {
+    min-height: 600px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #c3954c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover,
+button:hover {
+    background-color: #9b7439;
+}
+
+.welcome,
+.about,
+.services,
+.gallery,
+.contact {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.welcome h2,
+.about h2 {
+    color: #244d32;
+    margin-bottom: 20px;
+}
+
+.cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #244d32;
+    margin-bottom: 15px;
+}
+
+.page-header {
+    background-color: #244d32;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.page-header h2 {
+    font-size: 45px;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    color: #244d32;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    padding: 15px;
+    color: #244d32;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h2 {
+    color: #244d32;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+
+.cta {
+    text-align: center;
+    background-color: #d8c49a;
+    padding: 60px 20px;
+}
+
+.cta h2 {
+    color: #244d32;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1b3825;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .cards,
+    .services,
+    .gallery,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+}
