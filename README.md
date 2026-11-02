@@ -148,3 +148,12 @@ Student Number: ST10513824
 Project Type: Web Development PoE
 
 Business: Nature's Barn Farm
+
+
+9## 9. References and Resources
+
+- Pinterest. (2026). Farm-related images used in the website gallery. Available at: https://www.pinterest.com/ (Accessed: 2 November 2026).
+- TikTok. (2026). Farm animal video used in the website gallery. Available at: https://www.tiktok.com/ (Accessed: 2 November 2026).
+- Google Maps. Available at: https://www.google.com/maps (Accessed: 2 November 2026).
+
+The HTML, CSS and JavaScript code was developed for this project.
