@@ -39,32 +39,53 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #d8b365;
 }
 
+nav a.active {
+    color: #d8b365;
+    border-bottom: 2px solid #d8b365;
+}
+
 .hero {
     min-height: 600px;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-
+        url("../images/farm-background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 40px;
 }
 
 .hero-content {
     max-width: 700px;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.hero-content.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero h2 {
     font-size: 55px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: white;
 }
 
 .button,
@@ -78,6 +99,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover,
@@ -144,7 +166,6 @@ button:hover {
     margin-bottom: 25px;
 }
 
-
 .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -184,6 +205,7 @@ button:hover {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    display: block;
 }
 
 .gallery-item h3 {
@@ -229,10 +251,16 @@ form textarea {
     font-family: Arial, sans-serif;
 }
 
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #244d32;
+    box-shadow: 0 0 5px rgba(36, 77, 50, 0.3);
+}
+
 form button {
     margin-top: 20px;
 }
-
 
 .cta {
     text-align: center;
@@ -256,9 +284,47 @@ footer {
     padding: 25px;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-feedback {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-feedback.success {
+    color: #24743c;
+}
+
+.form-feedback.error {
+    color: #c62828;
+}
+
+.map-container {
+    grid-column: 1 / -1;
+    margin-top: 30px;
+}
+
+.map-container h2 {
+    color: #244d32;
+    margin-bottom: 10px;
+}
+
+.map-container iframe {
+    margin-top: 15px;
+    border-radius: 8px;
+    max-width: 100%;
+}
 
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
         gap: 20px;
@@ -268,6 +334,11 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 10px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 20px;
     }
 
     .hero h2 {
@@ -281,4 +352,25 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .page-header h2 {
+        font-size: 35px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    background-color: #000;
 }
